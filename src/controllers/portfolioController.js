@@ -1,13 +1,13 @@
 const portfolioRepository = require("../repositories/portfolioRepositorie");
 
 exports.getPortfolio = async (req, res) => {
-   const portfolio = portfolioRepository.getPortfolio();
+   const portfolio = await portfolioRepository.getPortfolio();
    res.json(portfolio);
 };
 
 exports.getProjetoById = async (req, res) => {
    const id = parseInt(req.params.id);
-   const projeto = portfolioRepository.getProjetoById(id);
+   const projeto = await portfolioRepository.getProjetoById(id);
    res.json(projeto);
 };
 
