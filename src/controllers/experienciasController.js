@@ -1,7 +1,8 @@
 const experienciasRepository = require("../repositories/experienciasRepositorie");
 
 exports.getAllExperiencias = async (req, res) => {
-   const experiencias = await experienciasRepository.getAllExperiencias();
+   const tipo = req.query.tipo;
+   const experiencias = await experienciasRepository.getAllExperiencias(tipo);
    res.json(experiencias);
 };
 
