@@ -4,7 +4,7 @@
    "main": "index.js",
    "scripts": {
       "dev": "cross-env NODE_ENV=development node --watch src/app.js",
-      "start": "cross-env NODE_ENV=production node --watch src/app.js"
+      "start": "cross-env NODE_ENV=production node src/app.js"
    },
    "dependencies": {
       "cors": "^2.8.5",
